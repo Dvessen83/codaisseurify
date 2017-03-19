@@ -3,8 +3,8 @@ Artist.delete_all
 
 
 #Artists
-artist1 = Artist.create(name: "The Beatles", bio:  Faker::Lorem.paragraph , country: "United Kingdom", genre: "Pop", label: "Apple Records", img_url: "https://images-na.ssl-images-amazon.com/images/I/41vDXsWV96L._SY355_.jpg")
-artist2 = Artist.create(name: "Muse", bio: Faker::Lorem.paragraph, country: "United Kingdom", genre: "Alternative Rock", label: "Warner Bros.", img_url: "https://pbs.twimg.com/profile_images/793901137690783746/sdXDkkpz.jpg")
+artist1 = Artist.create(name: "The Beatles", bio:  Faker::Lorem.paragraph , country: "United Kingdom", genre: "Pop", label: "Apple Records", img_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489940895/41vDXsWV96L._SY355__qojx0d.jpg")
+artist2 = Artist.create(name: "Muse", bio: Faker::Lorem.paragraph, country: "United Kingdom", genre: "Alternative Rock", label: "Warner Bros.", img_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489940880/sdXDkkpz_whylpy.jpg")
 
 #Songs
 song1 = Song.create!(title: "Things We Said Today", album: "A Hard Day's Night", released: ("10/07/1964"),  img_url: "https://upload.wikimedia.org/wikipedia/en/6/67/Ahardday%27snight.jpg", artist: artist1)
