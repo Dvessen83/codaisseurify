@@ -14,6 +14,11 @@ class ArtistsController < ApplicationController
     redirect_to root_path
   end
 
+  def self.order_by_name
+    order(:name)
+
+  end
+
 
 
 end
