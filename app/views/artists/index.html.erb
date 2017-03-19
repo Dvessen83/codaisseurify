@@ -1,0 +1,23 @@
+<header>
+    <div class="wrapper">
+        <h1>Artist Overview</h1>
+    </div>
+</header>
+
+<section class="artist-gallery">
+  <% @artists.each do |artist| %>
+  <article class="artist-card">
+    <div class="artist-image">
+
+      <p><%= link_to image_tag(artist.img_url, size: "250x250"), artist_path(artist.id) %></p>
+      <%=  %>
+    </div>
+
+
+  </article>
+
+
+
+  <% end %>
+
+</section>
