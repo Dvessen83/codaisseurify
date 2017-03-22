@@ -5,19 +5,17 @@
 </header>
 
 <section class="artist-gallery">
-  <% @artists.each do |artist| %>
-  <article class="artist-card">
-    <div class="artist-image">
-      <h3><%= link_to artist.name, artist_path(artist.id) %></h3>
-      <p><%= link_to image_tag(artist.img_url, size: "250x250"), artist_path(artist.id) %></p>
-      <%=  %>
-    </div>
+    <% @artists.each do |artist| %>
+    <article class="artist-card">
+        <div class="artist-image">
+            <h3><%= link_to artist.name, artist_path(artist.id) %></h3>
+        </div>
+        <div>
+            <%= link_to image_tag(artist.picture.image, size: "250x250"), artist_path(artist.id) %>
 
+            <% end %>
+        </div>
 
-  </article>
-
-
-
-  <% end %>
+    </article>
 
 </section>

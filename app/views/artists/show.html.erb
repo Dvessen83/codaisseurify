@@ -1,6 +1,6 @@
 <section class="body_show">
     <h1><%= @artist.name %></h1>
-    <%= image_tag @artist.img_url, size: "250x250" %>
+    <%= image_tag(@artist.picture.image, size: "250x250") %>
 
     <p>Biography:
         <%= @artist.bio %></p>
@@ -25,6 +25,5 @@
     <% end %>
 
     <p><%= link_to "Add new song", new_song_path, class: "btn btn-default" %></p>
-<p><%= link_to "Delete Artist", artist_path, method: :delete, data: { confirm: 'Are you sure? The Artist and all of it\'s songs will be deleted!' }, class: "btn btn-default" %></p>
-    <p><%= link_to "Back", root_path, class: "btn btn-default" %></p>
+    <p><%= link_to "Delete Artist", artist_path, method: :delete, data: { confirm: 'Are you sure? The Artist and all of it\'s songs will be deleted!' }, class: "btn btn-default" %></p> <p><%= link_to "Back", root_path, class: "btn btn-default" %></p>
 </section>

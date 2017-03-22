@@ -1,12 +1,24 @@
+Picture.delete_all
 Song.delete_all
 Artist.delete_all
 
 
 #Artists
-artist1 = Artist.create!(name: "The Beatles", bio:  Faker::Lorem.paragraph, country: "United Kingdom", genre: "Pop", label: "Apple Records", img_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489940895/41vDXsWV96L._SY355__qojx0d.jpg")
-artist2 = Artist.create!(name: "Muse", bio: Faker::Lorem.paragraph, country: "United Kingdom", genre: "Alternative Rock", label: "Warner Bros.", img_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489940880/sdXDkkpz_whylpy.jpg")
-artist3 = Artist.create!(name: "Chuck Berry", bio: Faker::Lorem.paragraph, country: "USA", genre: "Rock and Roll", label: "Mercury", img_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489946830/076.Chuck_Berry_1972_1_rj4c5m.jpg")
-artist4 = Artist.create!(name: "Halestorm", bio: Faker::Lorem.paragraph, country: "USA", genre: "Metal", label: "Atlantic", img_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489947027/Halestorm_yiikzt.png")
+artist1 = Artist.create!(name: "The Beatles", bio:  Faker::Lorem.paragraph, country: "United Kingdom", genre: "Pop", label: "Apple Records")
+artist2 = Artist.create!(name: "Muse", bio: Faker::Lorem.paragraph, country: "United Kingdom", genre: "Alternative Rock", label: "Warner Bros.")
+artist3 = Artist.create!(name: "Chuck Berry", bio: Faker::Lorem.paragraph, country: "USA", genre: "Rock and Roll", label: "Mercury")
+artist4 = Artist.create!(name: "Halestorm", bio: Faker::Lorem.paragraph, country: "USA", genre: "Metal", label: "Atlantic")
+
+
+#Pictures
+picture1 = Picture.create!(remote_image_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1490132596/bflfuz8pp1rsidxnzj1o.jpg", artist: artist1)
+picture2 = Picture.create!(remote_image_url:"http://res.cloudinary.com/dxgom8aj1/image/upload/v1490186708/vgyqdqjdtxtsu9zyadkm.jpg", artist: artist2)
+picture3 = Picture.create!(remote_image_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489946830/076.Chuck_Berry_1972_1_rj4c5m.jpg", artist: artist3)
+picture4 = Picture.create!(remote_image_url: "http://res.cloudinary.com/dxgom8aj1/image/upload/v1489947027/Halestorm_yiikzt.png", artist: artist4)
+
+
+
+
 
 #Songs
 song1 = Song.create!(title: "Things We Said Today", album: "A Hard Day's Night", released: ("10/07/1964"),  img_url: "https://upload.wikimedia.org/wikipedia/en/6/67/Ahardday%27snight.jpg", artist: artist1)
