@@ -1,21 +1,17 @@
 <section class="body_show">
     <h1><%= @song.title %></h1>
-    <%= image_tag @song.img_url, size: "250x250" %>
-
+    <% if @song.img_url? %>
+      <%= image_tag @song.img_url, size: "250x250" %>
+    <% end %>
     <p>Album:
         <%= @song.album %></p>
 
     <% if @song.released %>
     <p>Release date:
         <%= @song.released.strftime("%d-%m-%Y") %></p>
-
-<% else %>
-    <p>Release date: unknown</p>
+      <% else %>
+        <p>Release date: unknown</p>
     <% end %>
 
-
     <p><%= link_to "Delete song", song_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></p>
-
-
-
 </section>
